@@ -1,0 +1,144 @@
+.fondo-menu {
+    background-color: #3871a0;
+}
+
+p.titulobloque {
+    font-size: 1.1em;
+}
+
+.texto-menu {
+    color: white;
+    font-size: 1.1em;
+}
+
+.leyenda {
+    padding-top: 15px;
+    font-size: 1.2em;
+}
+
+.div-inicio {
+    padding-bottom: 40px;
+}
+
+.div-main-content-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 400px;
+}
+
+.divtamaniomap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    //min-height: 600px;
+    //min-width: 700px;
+}
+
+.colordescripcionmapa {
+    background-color: #f4f4f4;
+}
+
+.div {
+    width: 800px;
+    text-align: justify;
+}
+
+.estilomapa {
+    //overflow: scroll;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.menuprovincias {
+    background-color: #f4f4f4;
+    overflow: scroll;
+    max-height: 140px;
+}
+
+.menuavanzado {
+    max-height: 350px;
+    margin-left: 1%;
+    border-color:
+}
+
+p.descripcionProvincia {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.tamaniomapa {
+    min-height: 600px;
+    min-width: 100%;
+}
+
+p.titulodescripcion {
+    font-size: 1.4em;
+}
+
+a.elementomenu {
+    font-size: 1.2em;
+    margin: 3%;
+}
+
+.tamanio-letra {
+    max-width: 20%;
+}
+
+#tamanioletra {
+    max-width: 250px;
+}
+
+.menuaccesibilidad {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #BBBBBB;
+    background-color: #FFFFFF;
+}
+
+.elementoavanzado {
+    border-color: #BBBBBB;
+}
+
+#letra {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#espaciado2 {
+    max-width: 250px;
+}
+
+#espaciado {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.tituloprincipal {
+    font-size: 2.2em;
+}
+
+a.opcionavanzada {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.subtitulos {
+    margin-bottom: 3%;
+}
+
+.tituloinicial {
+    border-color: #BBBBBB;
+}
+
+.advancedOptions {
+    -webkit-filter: saturate(1);
+    /*-webkit-filter: grayscale(0);
+            -webkit-filter: brightness(100%);            
+            -webkit-filter: hue-rotate(0deg);
+            -webkit-filter: sepia(0);
+            -webkit-filter: invert(0);*/
+}

@@ -1,0 +1,138 @@
+body {
+    background-color: #000000;
+}
+
+h1,
+h3,
+h4 {
+    color: #FFFFFF;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+.elementomenu {}
+
+.fondo-menu {
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+}
+
+.titulobloque {
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+.texto-menu {
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+.leyenda {
+    padding-top: 15px;
+    font-size: 1.2em;
+}
+
+.div-inicio {
+    padding-bottom: 40px;
+}
+
+.div-main-content-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 400px;
+}
+
+.divtamaniomap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    //min-height: 600px;
+    //min-width: 700px;
+}
+
+.colordescripcionmapa {
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+}
+
+.div {
+    width: 800px;
+    text-align: justify;
+}
+
+.estilomapa {
+    //overflow: scroll;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.menuprovincias {
+    background-color: #f4f4f4;
+    overflow: scroll;
+    max-height: 140px;
+}
+
+.descripcionProvincia {
+    text-align: justify;
+}
+
+.tamaniomapa {
+    min-height: 600px;
+    min-width: 100%;
+}
+
+.menuavanzado {
+    background-color: #000000;
+    max-height: 350px;
+}
+
+a.elementomenu {
+    font-size: 1.2em;
+    margin: 3%;
+    background-color: #000000:
+}
+
+.elementoavanzado {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.tituloprincipal {
+    font-size: 2.2em;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.subtitulos {
+    margin-bottom: 3%;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.elementoavanzado {
+    border-color: #FFFFFF;
+}
+
+.menuaccesibilidad {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #FFFFFF;
+    background-color: #000000;
+}
+
+a.opcionavanzada {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.tituloinicial {
+    border-color: #FFFFFF;
+}

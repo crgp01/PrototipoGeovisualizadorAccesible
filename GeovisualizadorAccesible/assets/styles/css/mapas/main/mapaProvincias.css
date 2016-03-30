@@ -1,0 +1,209 @@
+texto {
+    font-size: 0.55em;
+    font-family: Verdana;
+}
+
+.land {
+    fill-opacity: 1;
+    stroke: hsl(0, 0%, 20%);
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+
+.seleccionado {
+    fill: hsl(0, 0%, 0%);
+}
+
+.bolivar {
+    fill: hsl(76, 85%, 63%);
+}
+
+.bolivar:hover {
+    fill: hsl(70, 94%, 60%);
+}
+
+.azuay {
+    fill: hsl(37, 100%, 66%);
+}
+
+.azuay:hover {
+    fill: hsl(20, 100%, 66%);
+}
+
+.carchi {
+    fill: hsl(76, 85%, 63%)
+}
+
+.carchi:hover {
+    fill: hsl(70, 94%, 60%);
+}
+
+.orellana {
+    fill: hsl(215, 45%, 45%)
+}
+
+.orellana:hover {
+    fill: hsl(186, 45%, 46%);
+}
+
+.esmeraldas {
+    fill: hsl(37, 100%, 66%)
+}
+
+.esmeraldas:hover {
+    fill: hsl(20, 100%, 66%)
+}
+
+.cañar {
+    fill: hsl(318, 51%, 50%)
+}
+
+.cañar:hover {
+    fill: hsl(340, 53%, 50%);
+}
+
+.guayas {
+    fill: hsl(215, 45%, 45%);
+}
+
+.guayas:hover {
+    fill: hsl(186, 45%, 46%);
+}
+
+.chimborazo {
+    fill: hsl(37, 100%, 66%)
+}
+
+.chimborazo:hover {
+    fill: hsl(20, 100%, 66%)
+}
+
+.imbabura {
+    fill: hsl(318, 51%, 50%)
+}
+
+.imbabura:hover {
+    fill: hsl(340, 53%, 50%)
+}
+
+.loja {
+    fill: hsl(76, 85%, 63%)
+}
+
+.loja:hover {
+    fill: hsl(70, 94%, 60%)
+}
+
+.manabi {
+    fill: hsl(318, 51%, 50%)
+}
+
+.manabi:hover {
+    fill: hsl(340, 53%, 50%)
+}
+
+.napo {
+    fill: hsl(76, 85%, 63%)
+}
+
+.napo:hover {
+    fill: hsl(70, 94%, 60%)
+}
+
+.eloro {
+    fill: hsl(318, 51%, 50%)
+}
+
+.eloro:hover {
+    fill: hsl(340, 53%, 50%)
+}
+
+.pichincha {
+    fill: hsl(215, 45%, 45%)
+}
+
+.pichincha:hover {
+    fill: hsl(186, 45%, 46%)
+}
+
+.losrios {
+    fill: hsl(37, 100%, 66%)
+}
+
+.losrios:hover {
+    fill: hsl(20, 100%, 66%)
+}
+
+.moronasantiago {
+    fill: hsl(76, 85%, 63%)
+}
+
+.moronasantiago:hover {
+    fill: hsl(70, 94%, 60%)
+}
+
+.tungurahua {
+    fill: hsl(215, 45%, 45%)
+}
+
+.tungurahua:hover {
+    fill: hsl(186, 45%, 46%)
+}
+
+.galapagos {
+    fill: hsl(318, 51%, 50%)
+}
+
+.galapagos:hover {
+    fill: hsl(340, 53%, 50%)
+}
+
+.cotopaxi {
+    fill: hsl(318, 51%, 50%)
+}
+
+.cotopaxi:hover {
+    fill: hsl(340, 53%, 50%)
+}
+
+.pastaza {
+    fill: hsl(318, 51%, 50%)
+}
+
+.pastaza:hover {
+    fill: hsl(340, 53%, 50%)
+}
+
+.zamora {
+    fill: hsl(215, 45%, 45%)
+}
+
+.zamora:hover {
+    fill: hsl(186, 45%, 46%)
+}
+
+.santaelena {
+    fill: hsl(76, 85%, 63%)
+}
+
+.santaelena:hover {
+    fill: hsl(70, 94%, 60%)
+}
+
+.santodomingo {
+    fill: hsl(76, 85%, 63%);
+}
+
+.santodomingo:hover {
+    fill: hsl(70, 94%, 60%);
+}
+
+.sucumbios {
+    fill: hsl(37, 100%, 66%)
+}
+
+:nth-child(1):focus {
+    fill: #FFFF00;
+    outline: none;
+    stroke: #FFFF00;
+}

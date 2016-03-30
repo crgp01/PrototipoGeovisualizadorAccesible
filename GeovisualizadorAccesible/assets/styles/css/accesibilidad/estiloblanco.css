@@ -1,0 +1,129 @@
+.fondo-menu {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+
+.titulobloque {
+    font-size: 1em;
+}
+
+h1,
+h3,
+h4 {
+    color: #000000;
+}
+
+.elementomenu {}
+
+.texto-menu {
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.leyenda {
+    padding-top: 15px;
+    font-size: 1.2em;
+}
+
+.div-inicio {
+    padding-bottom: 40px;
+}
+
+.div-main-content-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 400px;
+}
+
+.divtamaniomap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    //min-height: 600px;
+    //min-width: 700px;
+}
+
+.colordescripcionmapa {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.div {
+    width: 800px;
+    text-align: justify;
+}
+
+.estilomapa {
+    //overflow: scroll;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.menuprovincias {
+    background-color: #ffffff;
+    overflow: scroll;
+    max-height: 140px;
+    border: 1px solid #000000;
+}
+
+.descripcionProvincia {
+    text-align: justify;
+}
+
+.tamaniomapa {
+    min-height: 600px;
+    min-width: 100%;
+}
+
+.menuavanzado {
+    max-height: 350px;
+}
+
+a.elementomenu {
+    font-size: 1.2em;
+    margin: 3%;
+    background-color: #ffffff:
+}
+
+.elementoavanzado {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.tituloprincipal {
+    font-size: 2.2em;
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.subtitulos {
+    margin-bottom: 3%;
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.menuaccesibilidad {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #000000;
+    background-color: #ffffff;
+}
+
+.elementoavanzado {
+    border-color: #000000;
+}
+
+a.opcionavanzada {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.tituloinicial {
+    border-color: #000000;
+}

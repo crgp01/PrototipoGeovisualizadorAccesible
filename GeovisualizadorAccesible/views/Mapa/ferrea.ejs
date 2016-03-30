@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/styles/css/mapas/main/mapaCapitales.css">
+
+<!--<script src="/js/dependencies/Jquery/jquery-1.11.3.js"></script>
+<script src="/js/coffee/compiled/jquery.js"></script>-->
+
+<script src="/js/dependencies/Jquery/jquery-1.11.3.js"></script>
+<script src="/js/mapa/svgPanZoom.js"></script>
+
+<script src="/js/mapa/svgbarra.js"></script>
+<script src="/js/mapa/patterns.js"></script>
+
+
+
+
+<div class="divtamaniomap col-md-3 offset3 span6 colordescripcionmapa" tabindex="0" id="map">
+    <%- partial ('../Mapa/menuFerreo.ejs') %>
+</div>
+
+<div class="col-md-7 estilomapa divtamaniomap">
+    <div class="tamaniomapa">
+        <%- partial ('../Mapa/mapaFerroviario.ejs', {idFerreaSvgVista: idFerreaSvgVista}) %>
+    </div>
+</div>
+
+<div class="col-md-3 colordescripcionmapa">
+    <%- partial ('../Mapa/informacionMapa.ejs',{tituloInformacionMapaVista: tituloFerreaVista, descripcionInformacionMapaVista: descripcionFerreaVista}) %>
+</div>
