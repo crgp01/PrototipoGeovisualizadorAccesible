@@ -24,7 +24,7 @@ $(document).ready(function () {
 
         return false;
 
-    })
+    });
 
 
 
@@ -203,7 +203,7 @@ function greyscale(nuevogris) {
 
     $.post(
         '/Mapa/cookieStart', {
-            tipocookie: "greyscale",
+            tipocookie: "grises",
             valorcookie: nuevogris
         },
         function (data) {
@@ -245,7 +245,7 @@ function hue(nuevohue) {
 
     $.post(
         '/Mapa/cookieStart', {
-            tipocookie: "hue",
+            tipocookie: "tono",
             valorcookie: nuevohue
         },
         function (data) {
@@ -263,7 +263,7 @@ function hue(nuevohue) {
 function invert(nuevoinvert) {
     $.post(
         '/Mapa/cookieStart', {
-            tipocookie: "invert",
+            tipocookie: "invertido",
             valorcookie: nuevoinvert
         },
         function (data) {
@@ -281,7 +281,7 @@ function invert(nuevoinvert) {
 function opacity(nuevoopacity) {
     $.post(
         '/Mapa/cookieStart', {
-            tipocookie: "opacity",
+            tipocookie: "opacidad",
             valorcookie: nuevoopacity
         },
         function (data) {
@@ -302,7 +302,7 @@ function brightness(nuevobrightness) {
 
     $.post(
         '/Mapa/cookieStart', {
-            tipocookie: "brightness",
+            tipocookie: "brillo",
             valorcookie: nuevobrightness
         },
         function (data) {
@@ -323,7 +323,7 @@ function contrast(nuevocontrast) {
 
     $.post(
         '/Mapa/cookieStart', {
-            tipocookie: "contrast",
+            tipocookie: "contraste",
             valorcookie: nuevocontrast
         },
         function (data) {
@@ -370,13 +370,44 @@ function reiniciar() {
 
 function url() {
     var pathname = window.location.pathname; // Returns path only
-    var url = window.location.href;
-    /*
-        console.log(pathname);
-    console.log(url);
-        return url;*/
 
-    $("#original").attr("href", url);
+    var array = pathname.split('/');
+    var seleccion = 0;
+
+    if (array[3]) {
+        seleccion = array[3];
+    }
+
+    var pagina = array[2];
+    var contenedormapa = $('.tamaniomapa');
+
+    $.post(
+        '/Mapa/cookieStart', {
+            tipocookie: "mapapatron",
+            valorcookie: "original"
+        },
+        function (data) {
+            $.post(
+                '/Mapa/mapaOriginal', {
+                    mapa: array[2],
+                    seleccion: array[3]
+                },
+                function (data) {
+                    contenedormapa.html(data);
+                }
+            ).fail(function (res) {
+                alert("Error: en ajax2");
+            });
+
+        }
+    ).fail(function (res) {
+        alert("Error: en ajax1");
+    });
+
+
+
+
+
 }
 
 
@@ -392,13 +423,50 @@ function cookiesinicio() {
             tipoletra(data.tipoLetra);
             espaciadoletra(data.espaciadoLetra);
             tamanioletra(data.tamanioLetra);
-            saturate(data.saturacion);
+            //alert(data.saturacion);
+
+            contrast(data.contraste);
             $("#tipoletra").val(data.tipoLetra);
             $("#espaciado2").val(data.espaciadoLetra);
             $("#tamanioletra").val(data.tamanioLetra);
             $("#Saturation").val(data.saturacion);
-        }
-    ).fail(function (res) {
+            $("#Contrast").val(data.constraste);
+            $("#Brightness").val(data.brillo);
+            $("#Opacity").val(data.opacidad);
+            $("#Invert").val(data.invertido);
+            $("#Hue").val(data.tono);
+            $("#Sepia").val(data.sepia);
+            $("#Grayscale").val(data.grises);
+            saturate(data.saturacion);
+            //brightness(data.brillo);
+            greyscale(data.grises);
+            sepia(data.sepia);
+            hue(data.tono);
+            invert(data.invertido);
+            opacity(data.opacidad);
+
+            mapainiciocookie(data.mapapatron);
+
+
+        }).fail(function (res) {
         alert("Error: en ajax");
     });
+}
+
+//inicio de mapa cookie
+function mapainiciocookie(mapaestilo) {
+    switch (mapaestilo) {
+    case 'patronnegro':
+        patronnegro();
+        break;
+    case 'patron':
+        patron();
+        break;
+    case 'original':
+        url();
+        break;
+    default:
+        url();
+        break;
+    }
 }

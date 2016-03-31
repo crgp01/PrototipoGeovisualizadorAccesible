@@ -1,0 +1,119 @@
+.naranja {
+    fill: #000000;
+    fill-opacity: 1;
+    stroke: #f49b00;
+    stroke-opacity: 1;
+    stroke-width: 15;
+    stroke-dasharray: none;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    opacity: 1
+}
+
+.azul {
+    fill: #000000;
+    fill-opacity: 1;
+    stroke: #107cce;
+    stroke-opacity: 1;
+    stroke-width: 15;
+    stroke-dasharray: none;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    fill-rule: nonzero;
+    opacity: 1;
+}
+
+.verde {
+    fill: #000000;
+    fill-opacity: 1;
+    stroke: #009900;
+    stroke-opacity: 1;
+    stroke-width: 15;
+    stroke-dasharray: none;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    opacity: 1;
+}
+
+.amarillo {
+    class: verde fill: #000000;
+    fill-opacity: 1;
+    stroke: #ffe900;
+    stroke-opacity: 1;
+    stroke-width: 15;
+    stroke-dasharray: none;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    opacity: 1;
+}
+
+.estaciones {
+    fill: #ffffff;
+    fill-opacity: 1;
+    stroke: #ffffff;
+    stroke-opacity: 1;
+    stroke-width: 1;
+    stroke-dasharray: none;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    opacity: 1;
+}
+
+.estacionesprincipales {
+    fill: #ffffff;
+    fill-opacity: 1;
+    stroke: #242424;
+    stroke-opacity: 1;
+    stroke-width: 1;
+    stroke-dasharray: none;
+    stroke-linejoin: round;
+    stroke-linecap: butt;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    opacity: 1;
+}
+
+.cuadrado {
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-linejoin: round;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    width: 13;
+    height: 13;
+    color: rgb(255, 233, 0);
+}
+
+.texto {
+    fill: #ffffff;
+    stroke: #242424;
+    stroke-linejoin: round;
+    fill-rule: nonzero;
+    font-size: 9px;
+    font-family: Arial;
+    letter-spacing: 0;
+    word-spacing: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.textonormal {
+    fill: none;
+    stroke: #242424;
+    stroke-width: 15;
+    stroke-linejoin: round;
+    stroke-dashoffset: ;
+    fill-rule: nonzero;
+    font-size: 9px;
+    font-family: Arial;
+    letter-spacing: 0;
+    word-spacing: 0;
+}

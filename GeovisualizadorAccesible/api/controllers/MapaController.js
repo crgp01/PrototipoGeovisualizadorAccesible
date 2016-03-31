@@ -2,11 +2,21 @@ module.exports = {
 
     index: function (req, res) {
         var estilo = (req.cookies.estilo) ? req.cookies.estilo : 'estilo.css';
-        var tamanioLetra = (req.cookies.tamanioletra) ? req.cookies.tamanioletra : 14;
+        var tamanioLetra = (req.cookies.tamanioletra) ? req.cookies.tamanioletra : 1;
 
-        var espaciadoLetra = (req.cookies.espaciadoletra) ? req.cookies.espaciadoletra : 1.42857143;
+        var espaciadoLetra = (req.cookies.espaciadoletra) ? req.cookies.espaciadoletra : 1;
 
         var saturacion = (req.cookies.saturate) ? req.cookies.saturate : 1;
+
+        var contraste = (req.cookies.contraste) ? req.cookies.contraste : 1;
+        var brillo = (req.cookies.brillo) ? req.cookies.brillo : 1;
+        var opacidad = (req.cookies.opacidad) ? req.cookies.opacidad : 1;
+        var invertido = (req.cookies.invertido) ? req.cookies.invertido : 0;
+        var tono = (req.cookies.tono) ? req.cookies.tono : 0;
+        var sepia = (req.cookies.sepia) ? req.cookies.sepia : 0;
+        var grises = (req.cookies.grises) ? req.cookies.grises : 0;
+        var mapapatron = (req.cookies.mapapatron) ? req.cookies.mapapatron : 'original';
+
 
 
         return res.redirect('/Mapa/main');
@@ -351,6 +361,35 @@ module.exports = {
         });
     },
 
+
+    metro: function (req, res) {
+        var menuIdEstacion = req.param("id");
+        var idEstacionSvg = menuIdEstacion;
+        var tituloEstacion = "";
+        var descripcionEstacion = "";
+
+        switch (menuIdEstacion) {
+        case '1':
+            tituloEstacion = "Le Carrefour";
+            descripcionEstacion = "Le Carrefour Station";
+            break;
+        case '2':
+            tituloEstacion = "Saint-Martin";
+            descripcionEstacion = "Saint-Martin Station";
+            break;
+
+        default:
+
+            break;
+        }
+
+        res.view({
+            tituloEstacionVista: tituloEstacion,
+            descripcionEstacionVista: descripcionEstacion,
+            idEstacionVista: idEstacionSvg
+        });
+    },
+
     //Mapas Originales
 
 
@@ -375,14 +414,29 @@ module.exports = {
         case 'saturate':
             res.cookie('saturate', valorcookie);
             break;
-        case 'greyscale':
-            res.cookie('greyscale', valorcookie);
+        case 'grises':
+            res.cookie('grises', valorcookie);
             break;
         case 'sepia':
             res.cookie('sepia', valorcookie);
             break;
-        case 'hue':
-            res.cookie('hue', valorcookie);
+        case 'tono':
+            res.cookie('tono', valorcookie);
+            break;
+        case 'contraste':
+            res.cookie('contraste', valorcookie);
+            break;
+        case 'brillo':
+            res.cookie('brillo', valorcookie);
+            break;
+        case 'opacidad':
+            res.cookie('opacidad', valorcookie);
+            break;
+        case 'invertido':
+            res.cookie('invertido', valorcookie);
+            break;
+        case 'mapapatron':
+            res.cookie('mapapatron', valorcookie);
             break;
 
 
@@ -402,12 +456,20 @@ module.exports = {
 
         var tipoLetra = (req.cookies.tipoletra) ? req.cookies.tipoletra : 'Arial';
 
-        var tamanioLetra = (req.cookies.tamanioletra) ? req.cookies.tamanioletra : 14;
+        var tamanioLetra = (req.cookies.tamanioletra) ? req.cookies.tamanioletra : 1;
 
-        var espaciadoLetra = (req.cookies.espaciadoletra) ? req.cookies.espaciadoletra : 1.42857143;
+        var espaciadoLetra = (req.cookies.espaciadoletra) ? req.cookies.espaciadoletra : 1;
 
-        var saturacion = (req.cookies.saturate) ? req.cookies.saturate : 1
+        var saturacion = (req.cookies.saturate) ? req.cookies.saturate : 1;
 
+        var contraste = (req.cookies.contraste) ? req.cookies.contraste : 1;
+        var brillo = (req.cookies.brillo) ? req.cookies.brillo : 1;
+        var opacidad = (req.cookies.opacidad) ? req.cookies.opacidad : 1;
+        var invertido = (req.cookies.invertido) ? req.cookies.invertido : 0;
+        var tono = (req.cookies.tono) ? req.cookies.tono : 0;
+        var sepia = (req.cookies.sepia) ? req.cookies.sepia : 0;
+        var grises = (req.cookies.grises) ? req.cookies.grises : 0;
+        var mapapatron = (req.cookies.mapapatron) ? req.cookies.mapapatron : 'original';
         console.log("aqui");
 
         res.json({
@@ -415,9 +477,56 @@ module.exports = {
             tipoLetra: tipoLetra,
             tamanioLetra: tamanioLetra,
             espaciadoLetra: espaciadoLetra,
-            saturacion: saturacion
-        });
-    }
+            saturacion: saturacion,
+            contraste: contraste,
+            brillo: brillo,
+            opacidad: opacidad,
+            invertido: invertido,
+            tono: tono,
+            sepia: sepia,
+            grises: grises,
+            mapapatron: mapapatron
 
+        });
+    },
+
+    //mapa Original desde jquery
+    mapaOriginal: function (req, res) {
+
+        var mapa = '';
+
+        var variableswitch = req.param("mapa");
+
+        console.log(variableswitch);
+
+        switch (variableswitch) {
+        case 'capitales':
+            mapa = 'mapacapitales.ejs';
+            break;
+        case 'provincias':
+            mapa = 'mapaProvincias.ejs';
+            break;
+        case 'ferrea':
+            mapa = 'mapaFerroviario.ejs';
+            break;
+        default:
+            break;
+        }
+
+
+        var id = req.param("seleccion");;
+
+        var vista = 'Mapa/' + mapa;
+
+        console.log(vista);
+
+        res.view(vista, {
+            idFerreaSvgVista: id,
+            idProvinciaSvgVista: id,
+            idCapitalesSvgVista: id,
+            layout: null
+        });
+
+    }
 
 };
