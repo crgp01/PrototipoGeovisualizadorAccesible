@@ -377,6 +377,54 @@ module.exports = {
             tituloEstacion = "Saint-Martin";
             descripcionEstacion = "Saint-Martin Station";
             break;
+        case '3':
+            tituloEstacion = "Notredame";
+            descripcionEstacion = "Notredame Station";
+            break;
+        case '4':
+            tituloEstacion = "Chomedey";
+            descripcionEstacion = "Chomedey Station";
+            break;
+        case '5':
+            tituloEstacion = "Gouin";
+            descripcionEstacion = "Gouin Station";
+            break;
+        case '6':
+            tituloEstacion = "Bois-Franc";
+            descripcionEstacion = "Bois-Franc Station";
+            break;
+        case '7':
+            tituloEstacion = "Pourier";
+            descripcionEstacion = "Pourier Station";
+            break;
+        case '8':
+            tituloEstacion = "Côte-Vertu";
+            descripcionEstacion = "Côte-Vertu Station";
+            break;
+        case '9':
+            tituloEstacion = "Du Cóllege";
+            descripcionEstacion = "Du Cóllege Station";
+            break;
+        case '10':
+            tituloEstacion = "De la savane";
+            descripcionEstacion = "De la savane Station";
+            break;
+        case '11':
+            tituloEstacion = "Namur";
+            descripcionEstacion = "Namur Station";
+            break;
+        case '12':
+            tituloEstacion = "Plamondon";
+            descripcionEstacion = "Plamondon Station";
+            break;
+        case '13':
+            tituloEstacion = "Cóte-Sainte-Catherine";
+            descripcionEstacion = "Cóte-Sainte-Catherine Station";
+            break;
+        case '14':
+            tituloEstacion = "Snowdon";
+            descripcionEstacion = "Snowdon Station";
+            break;
 
         default:
 

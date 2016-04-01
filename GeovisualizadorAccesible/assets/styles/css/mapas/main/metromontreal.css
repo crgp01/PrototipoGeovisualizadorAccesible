@@ -12,6 +12,10 @@
     opacity: 1
 }
 
+.seleccionado {
+    fill: hsl(0, 0%, 0%);
+}
+
 .azul {
     fill: #000000;
     fill-opacity: 1;
@@ -116,4 +120,12 @@
     font-family: Arial;
     letter-spacing: 0;
     word-spacing: 0;
+}
+
+:nth-child(1):focus {
+    stroke: hsl(0, 100%, 50%);
+    stroke-opacity: 1;
+    stroke-width: 1;
+    fill: hsl(60, 100%, 50%);
+    outline: none;
 }

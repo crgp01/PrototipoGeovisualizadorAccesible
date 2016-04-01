@@ -32,14 +32,14 @@ function patron() {
                 if (atributosclase.search("seleccionado") > 0) {
                     elements[i].setAttribute("class", "land seleccionado");
                 } else {
-                    /*alert(elements[i].getAttribute('class'));*/
+                    /*console.log(elements[i].getAttribute('class'));*/
                     elements[i].setAttribute("class", "land");
                 }
             }
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax1");
+        console.log("Error: en ajax1");
     });
 
 
@@ -85,14 +85,14 @@ function patronnegro() {
                 if (atributosclase.search("seleccionado") > 0) {
                     elements[i].setAttribute("class", "land seleccionado");
                 } else {
-                    /*  alert(elements[i].getAttribute('class'));*/
+                    console.log(elements[i].getAttribute('class'));
                     elements[i].setAttribute("class", "land");
                 }
             }
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax1");
+        console.log("Error: en ajax1");
     });
 
 

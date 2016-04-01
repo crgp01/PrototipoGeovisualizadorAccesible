@@ -13,13 +13,13 @@ texto {
 .seleccionado {
     fill: hsl(60, 100%, 50%);
     outline: medium none;
-    stroke: hsla(0, 100%, 50%);
+    stroke: hsl(0, 100%, 50%);
     stroke-opacity: 1;
     stroke-width: 1;
 }
 
 .rutas:hover {
-    stroke: hsla(0, 100%, 50%);
+    stroke: hsl(0, 100%, 50%);
     stroke-opacity: 1;
 }
 

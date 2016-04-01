@@ -57,29 +57,19 @@
 </head>
 
 <body class="advancedOptions">
-    <!--<script type="text/javascript">
-            $(document).ready(function () {
-                //demo.initOverviewPanel();
-                demo.initCookieStore();
-                demo.initPageEnhancer("exploration-tool-theme");
-                demo.initExplorationTool(".flc-explorationTool");
-            });
-    </script>
-    -->
-
-
 
     <div class="page-header text-center row tituloinicial">
-        <p class="tituloprincipal">Accessible Geographic Maps </p>
+        <!--<p class="tituloprincipal">Accessible Geographic Maps </p>-->
+        <h1 class="tituloprincipal">Accessible Geographic Maps</h1>
     </div>
 
     <!-- bottom-up button-->
-    <input type="image" src="../../images/flecha.png" alt="Estilo Amarillo sobre negro" class="back-to-top" style="display: inline;" href="">
+    <input type="image" src="../../images/flecha.png" alt="back to top" class="back-to-top" style="display: inline;" title="back to top">
 
 
     <div class="panel-heading">
         <p class="panel-title">
-            <a data-toggle="collapse" class="btn btn-default opcionavanzada" href="#menuaccesibilidad" onclick="">
+            <a data-toggle="collapse" class="btn btn-default opcionavanzada" href="#menuaccesibilidad" onclick="" tabindex="1">
                 Accessibility
             </a>
         </p>
@@ -87,182 +77,125 @@
 
 
     <div id="menuaccesibilidad" class="panel-collapse collapse">
-        <ul class="list-group">
-            <div class="menuavanzado">
-                <li class="list-group-item elementoavanzado">
-                    <div class="row">
-                        <div class="estilos col-md-3">
-                            <input type="image" src="../../images/normal2.png" alt="Estilo Original" width="48" height="48" onclick="pulsar('estilo.css')">
-                            <input type="image" src="../../images/blanco.png" alt="Estilo Blanco con negro" width="48" height="48" onclick="pulsar('estiloblanco.css')">
-                            <input type="image" src="../../images/amarillo-negro.png" alt="Estilo Amarillo sobre negro" width="48" height="48" onclick="pulsar('estiloamarillo-negro.css')">
-                            <input type="image" src="../../images/negro-amarillo.png" alt="Estilo Negro sobre Amarillo" width="48" height="48" onclick="pulsar('estilonegro-amarillo.css')">
-                            <input type="image" src="../../images/negro.png" alt="Estilo Negro con blanco" width="48" height="48" onclick="pulsar('estilonegro.css')">
-                            <input type="image" src="../../images/bajocontraste.png" alt="Estilo bajo contraste" width="48" height="48" onclick="pulsar('estilobajocontraste.css')">
-                        </div>
-
-                        <div class="tamanio-letra col-md-2">
-                            <p>Font Size</p>
-                            <img id="letranormal" src="../../images/letranormal.png" alt="small font size" height="42" width="42">
-                            <input id="letra" class="inline" type='text' name='username' size='2' disabled/>
-                            <img id="letragrande" src="../../images/letragrande.png" alt="small font size" height="42" width="42">
-                            <input id="tamanioletra" class="" type="range" name="points" min="1" max="2.5" size='5' step="0.1">
-                        </div>
-
-                        <div class="interlineado col-md-2">
-                            <p>Line Spacing</p>
-                            <img id="letranormal" src="../../images/linea1.png" alt="small font size" height="42" width="42">
-                            <input id="espaciado" class="inline" type='text' name='username' size='2' disabled/>
-                            <img id="letragrande" src="../../images/linea3.png" alt="small font size" height="42" width="42">
-                            <input id="espaciado2" class="" type="range" name="points" min="1" max="2.5" size='5' step="0.1">
-                        </div>
-                        <div class="tipo-letra col-md-2">
-                            <p>Text Style</p>
-
-                            <select id="tipoletra" width="10">
-                                <option id="Calibri" value="Calibri">Calibri</option>
-                                <option id="Arial" value="Arial">Arial</option>
-                                <option id="Times New Roman" value="Times New Roman">Times New Roman</option>
-                                <option id="Helvetica" value="Helvetica">Helvetica</option>
-                                <option id="Verdana" value="Verdana">Verdana</option>
-
-                            </select>
-                        </div>
-                        <a class="btn btn-default opcionavanzada" onclick="reiniciar()">Reload Settings</a>
-                    </div>
-        </ul>
-        </div>
-
-        <div class="panel-heading">
-            <p class="panel-title">
-                <a data-toggle="collapse" class="btn btn-default opcionavanzada" href="#collapse2">
-                Advanced Options
-            </a>
-            </p>
-        </div>
-
-        <div id="collapse2" class="panel-collapse collapse">
-            <ul class="list-group ">
-                <div class="menuavanzado">
-                    <li class="list-group-item elementoavanzado">
-                        <div class="row">
-                            <p>Pattern</p>
-                            <div class="col-md-3">
-                                <input type="image" src="../../images/patron.png" alt="Estilo Original" width="48" height="48" onclick="patronnegro()">
-                                <input type="image" src="../../images/colorypatron.png" alt="Estilo Original" width="48" height="48" onclick="patron()">
-                                <a id="original" onclick="url()">
-                                    <input type="image" src="../../images/color.png" alt="Estilo Original" width="48" height="48">
-                                </a>
-                            </div>
-                            <div class="col-md-2">
-                                <p>Saturation</p>
-                                <input id="Saturation" class="" type="range" name="points" min="1" max="10" size='5' step="1">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Brightness</p>
-                                <input id="Brightness" class="" type="range" name="points" min="1" max="1.2" size='5' step="0.1">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Hue</p>
-                                <input id="Hue" class="" type="range" name="points" min="0" max="360" size='5' step="0.1">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Grayscale</p>
-                                <input id="Grayscale" class="" type="range" name="points" min="0" max="1" size='5' step="0.1">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Sepia</p>
-                                <input id="Sepia" class="" type="range" name="points" min="0" max="1" size='5' step="0.1">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Invert</p>
-                                <input id="Invert" class="" type="range" name="points" min="0" max="1" size='5' step="0.001">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Opacity</p>
-                                <input id="Opacity" class="" type="range" name="points" min="0.2" max="1" size='5' step="0.001">
-                            </div>
-                            <div class="col-md-2">
-                                <p>Contrast</p>
-                                <input id="Contrast" class="" type="range" name="points" min="1" max="4" size='5' step="0.001">
-                            </div>
-                            <a class="btn btn-default opcionavanzada" onclick="restart()">Reload Settings</a>
-                        </div>
-                    </li>
-
-
+        <!--    <ul class="list-group">-->
+        <div class="menuavanzado">
+            <!-- <li class="list-group-item elementoavanzado">-->
+            <div class="row">
+                <div class="estilos col-md-3">
+                    <input type="image" src="../../images/normal2.png" alt="Estilo Original" width="48" height="48" onclick="pulsar('estilo.css')" tabindex="2" title="normal style">
+                    <input type="image" src="../../images/blanco.png" alt="Estilo Blanco con negro" width="48" height="48" onclick="pulsar('estiloblanco.css')" tabindex="3" title="white style">
+                    <input type="image" src="../../images/amarillo-negro.png" alt="Estilo Amarillo sobre negro" width="48" height="48" onclick="pulsar('estiloamarillo-negro.css')" tabindex="4" title="yellow style">
+                    <input type="image" src="../../images/negro-amarillo.png" alt="Estilo Negro sobre Amarillo" width="48" height="48" onclick="pulsar('estilonegro-amarillo.css')" tabindex="5" title="black style">
+                    <input type="image" src="../../images/negro.png" alt="Estilo Negro con blanco" width="48" height="48" onclick="pulsar('estilonegro.css')" tabindex="6" title="black and white style">
+                    <input type="image" src="../../images/bajocontraste.png" alt="Estilo bajo contraste" width="48" height="48" onclick="pulsar('estilobajocontraste.css')" tabindex="7" title="low contrast style">
                 </div>
 
+                <div class="tamanio-letra col-md-2">
+                    <p>Font Size</p>
+                    <img id="letranormal" src="../../images/letranormal.png" alt="small font size" height="42" width="42">
+                    <input id="letra" class="inline" type='text' name='username' size='2' title="font" disabled />
+                    <img id="letragrande" src="../../images/letragrande.png" alt="small font size" height="42" width="42">
+                    <input id="tamanioletra" class="" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="8" title="font size">
+                </div>
 
+                <div class="interlineado col-md-2" tabindex="8">
+                    <p>Line Spacing</p>
+                    <img id="espaciadonormal" src="../../images/linea1.png" alt="small font size" height="42" width="42">
+                    <input id="espaciado" class="inline" type='text' name='username' size='2' disabled title="spacing" />
+                    <img id="espaciadogrande" src="../../images/linea3.png" alt="small font size" height="42" width="42">
+                    <input id="espaciado2" class="" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="9" title="spacing">
+                </div>
+                <div class="tipo-letra col-md-2">
+                    <p>Text Style</p>
 
-            </ul>
+                    <select id="tipoletra" width="10" tabindex="10" title="tipo de letra">
+                        <option id="Calibri" value="Calibri">Calibri</option>
+                        <option id="Arial" value="Arial">Arial</option>
+                        <option id="Times New Roman" value="Times New Roman">Times New Roman</option>
+                        <option id="Helvetica" value="Helvetica">Helvetica</option>
+                        <option id="Verdana" value="Verdana">Verdana</option>
+
+                    </select>
+                </div>
+                <a class="btn btn-default opcionavanzada" onclick="reiniciar()" tabindex="11">Reload Settings</a>
+            </div>
+            <!--  </li>-->
         </div>
+        <!--</ul>-->
 
+    </div>
 
-
-
-
-
-        <!--<div class="panel panel-default">
     <div class="panel-heading">
         <p class="panel-title">
-            <a data-toggle="collapse" class="btn btn-default" href="#collapse2">Accesibility</a>
+            <a data-toggle="collapse" class="btn btn-default opcionavanzada" href="#collapse2" tabindex="12">
+                Advanced Options
+            </a>
         </p>
     </div>
 
-    <div id="collapse2" class="panel-collapse collapse menuprovincias">
-        <ul class="list-group ">
-            <li class="list-group-item">
-                <button onclick="pulsar()">Cambiar</button>
-            </li>
-            <li class="list-group-item">
-                <button onclick="pulsar2()">Cambiar amarillo</button>
-            </li>
-            <li class="list-group-item">
-                <button onclick="pulsar3()">Cambiar negro</button>
-            </li>
-            <li class="list-group-item">
-                <button onclick="pulsar2()">Cambiar gris</button>
-            </li>
-        </ul>
+    <div id="collapse2" class="panel-collapse collapse">
+        <!--   <ul class="list-group ">-->
+        <div class="menuavanzado">
+            <!--<li class="list-group-item elementoavanzado">-->
+            <div class="row">
+                <p>Pattern</p>
+                <div class="col-md-3" tabindex="13">
+                    <input type="image" src="../../images/patron.png" alt="without pattern" width="48" height="48" onclick="patronnegro()" tabindex="14" title="without pattern">
+                    <input type="image" src="../../images/colorypatron.png" alt="Color and pattern" width="48" height="48" onclick="patron()" tabindex="15" title="color and pattern">
+                    <a id="original" onclick="url()">
+                        <input type="image" src="../../images/color.png" alt="only pattern" width="48" height="48" tabindex="16" title="only pattern">
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <p>Saturation</p>
+                    <input id="Saturation" class="" type="range" name="points" min="1" max="10" size='5' step="1" tabindex="17" title="Saturation">
+                </div>
+                <div class="col-md-2">
+                    <p>Brightness</p>
+                    <input id="Brightness" class="" type="range" name="points" min="1" max="1.2" size='5' step="0.1" tabindex="18" title="Brightness">
+                </div>
+                <div class="col-md-2">
+                    <p>Hue</p>
+                    <input id="Hue" class="" type="range" name="points" min="0" max="360" size='5' step="0.1" tabindex="19" title="Hue">
+                </div>
+                <div class="col-md-2">
+                    <p>Grayscale</p>
+                    <input id="Grayscale" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="20" title="Grayscale">
+                </div>
+                <div class="col-md-2">
+                    <p>Sepia</p>
+                    <input id="Sepia" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="21" title="Sepia">
+                </div>
+                <div class="col-md-2">
+                    <p>Invert</p>
+                    <input id="Invert" class="" type="range" name="points" min="0" max="1" size='5' step="0.001" tabindex="22" title="Invert">
+                </div>
+                <div class="col-md-2">
+                    <p>Opacity</p>
+                    <input id="Opacity" class="" type="range" name="points" min="0.2" max="1" size='5' step="0.001" tabindex="23" title="Opacity">
+                </div>
+                <div class="col-md-2">
+                    <p>Contrast</p>
+                    <input id="Contrast" class="" type="range" name="points" min="1" max="4" size='5' step="0.001" tabindex="24" title="Contrast">
+                </div>
+                <a class="btn btn-default opcionavanzada" onclick="restart()" tabindex="25">Reload Settings</a>
+            </div>
+            <!--  </li>-->
+        </div>
+        <!--</ul>-->
+
+
     </div>
-</div>-->
 
-        <!-- <div>
-    
-    <div class="flc-explorationTool fl-explorationTool anchobarra">
-
-      
-        <div class="fl-panelBar fl-inverted-color">
-            <span for="show-hide" class="flc-icon-explorationTool fl-icon-explorationTool" role="presentation" aria-label="Discover"></span>
-            <a href="#" id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide" aria-label="" aria-controls="dtpanel" role="button"></a>
-        </div>
-
-         This is the div that will contain the UI Options component 
-        <div class="flc-slidingPanel-panel flc-prefsEditor-iframe" role="region" id="dtpanel" aria-expanded="true"></div>
-
-    </div>
-   
-
-</div>-->
-
-
-        <div class="row fondo-menu" id="bs-example-navbar-collapse-1" style="max-height:30px;">
-            <p class="fondo-menu">.</p>
-        </div>
-
-
-
-
-        <div class="div-main-content-body container-fluid row">
-            <%- body %>
-        </div>
-
-
-
-
+    <div class="row fondo-menu" id="bs-example-navbar-collapse-1" style="max-height:30px;">
         <p class="fondo-menu">.</p>
+    </div>
 
+    <div class="div-main-content-body container-fluid row">
+        <%- body %>
+    </div>
 
+    <p class="fondo-menu">.</p>
 
 
 </body>

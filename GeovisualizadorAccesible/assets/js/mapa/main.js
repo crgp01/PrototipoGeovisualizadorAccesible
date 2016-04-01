@@ -32,7 +32,7 @@ $(document).ready(function () {
         if (e.which == 13) {
             var focused = $(':focus').parent();
             if (focused.attr("xlink:href")) {
-                /* alert("redirect: " + focused.attr("xlink:href"));*/
+                /* console.log("redirect: " + focused.attr("xlink:href"));*/
                 window.location.replace(focused.attr("xlink:href"));
             }
         }
@@ -116,7 +116,7 @@ function pulsar(parametro) {
             $("#estilo").attr("href", "/styles/css/accesibilidad/" + parametro);
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 }
 
@@ -139,7 +139,7 @@ function tamanioletra(nuevotamanio) {
             document.getElementById("letra").value = nuevotamanio;
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -157,7 +157,7 @@ function espaciadoletra(nuevoespaciado) {
             document.getElementById("espaciado").value = nuevoespaciado;
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -176,7 +176,7 @@ function tipoletra(nuevotipoletra) {
             $("body").css("font-family", nuevotipoletra);
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -195,7 +195,7 @@ function saturate(nuevasaturacion) {
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 }
 
@@ -214,7 +214,7 @@ function greyscale(nuevogris) {
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 }
 
@@ -234,7 +234,7 @@ function sepia(nuevosepia) {
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -255,7 +255,7 @@ function hue(nuevohue) {
             //document.getElementById("greyval").textContent = setG;
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -273,7 +273,7 @@ function invert(nuevoinvert) {
             //document.getElementById("greyval").textContent = setG;
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -291,7 +291,7 @@ function opacity(nuevoopacity) {
             //document.getElementById("greyval").textContent = setG;
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 
@@ -313,7 +313,7 @@ function brightness(nuevobrightness) {
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -334,7 +334,7 @@ function contrast(nuevocontrast) {
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 
 }
@@ -396,12 +396,12 @@ function url() {
                     contenedormapa.html(data);
                 }
             ).fail(function (res) {
-                alert("Error: en ajax2");
+                console.log("Error: en ajax2");
             });
 
         }
     ).fail(function (res) {
-        alert("Error: en ajax1");
+        console.log("Error: en ajax1");
     });
 
 
@@ -416,14 +416,14 @@ function cookiesinicio() {
     $.post(
         '/Mapa/cookieRead',
         function (data) {
-            //alert("tipo letra: " + data.tipoletra + "   espaciado letra: " + data.espaciadoletra);
+            //console.log("tipo letra: " + data.tipoletra + "   espaciado letra: " + data.espaciadoletra);
             //$("#estilo").attr("href", "/styles/css/accesibilidad/" + data.estilo);
 
             pulsar(data.estilo);
             tipoletra(data.tipoLetra);
             espaciadoletra(data.espaciadoLetra);
             tamanioletra(data.tamanioLetra);
-            //alert(data.saturacion);
+            //console.log(data.saturacion);
 
             contrast(data.contraste);
             $("#tipoletra").val(data.tipoLetra);
@@ -449,7 +449,7 @@ function cookiesinicio() {
 
 
         }).fail(function (res) {
-        alert("Error: en ajax");
+        console.log("Error: en ajax");
     });
 }
 
